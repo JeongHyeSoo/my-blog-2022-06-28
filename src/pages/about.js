@@ -3,10 +3,10 @@ import Layout from "../components/Layout";
 
 function AboutPage() {
     return (
-        <Layout>
-            <title>자기소개</title>
-
-            <h1>자기소개</h1>
+        <Layout pageTitle="About Me">
+            <p>자기소개자기소개자기소개자기소개자기소개자기소개자기소개
+            자기소개자기소개자기소개자기소개자기소개자기소개자기소개
+            </p>
         </Layout>
     )
 }

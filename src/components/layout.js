@@ -1,21 +1,30 @@
 import React from "react";
 import { Link } from "gatsby"
 
-function Layout({ children }) {
+import { container, heading, navLinks, navLinkItem, navLinkText } from "./layout.module.css"
+
+function Layout({ pageTitle, children }) {
     return (
-        <main>
-            <>
-                <div style={{ gap: 20, display: "flex" }}>
-                    <Link to="/">home</Link>
-                    <Link to="/about">about</Link>
-                    <Link to="/test-page">test-page</Link>
-                </div>
+        <div className={container}>
+            <title>{pageTitle}</title>
+            <nav>
+                <ul className={navLinks}>
+                    <li className={navLinkItem}>
+                        <Link className={navLinkText} to="/">home</Link>
+                    </li>
+                    <li className={navLinkItem}>
+                        <Link className={navLinkText} to="/about">about</Link>
+                    </li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </nav>
+            <main>
+                <h1 className={heading}>{pageTitle}</h1>
                 {children}
-                <div>
-                    copyright...
-                </div>
-            </>
-        </main>
+            </main >
+            <div>Copyright All Rights</div>
+        </div>
     );
 }
 
