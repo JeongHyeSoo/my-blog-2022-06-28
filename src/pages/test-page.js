@@ -1,15 +1,11 @@
-import { Link } from "gatsby"
 import React from "react";
+import Head from "../components/head";
 
 function TestSpacePage() {
     return (
         <main>
             <title>테스트</title>
-            <div style={{ gap: 20, display: "flex" }}>
-                <Link to="/">home</Link>
-                <Link to="/about">about</Link>
-                <Link to="/test-page">test-page</Link>
-            </div>
+            <Head />
             <h1>테스트</h1>
         </main>
     )
