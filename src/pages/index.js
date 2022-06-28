@@ -6,6 +6,9 @@ const IndexPage = () => {
     <Layout pageTitle="Home Page">
       <p>Home PageHome PageHome PageHome PageHome PageHome PageHome PageHome PageHome Page
         Home PageHome PageHome PageHome PageHome PageHome PageHome Page</p>
+    <StaticImage alt=""
+    src="https://images.mypetlife.co.kr/content/uploads/2021/10/19151330/corgi-g1a1774f95_1280.jpg"
+    />
     </Layout>
   )
 }
