@@ -4,13 +4,15 @@ import { container, heading, navLinks, navLinkItem, navLinkText } from "./layout
 
 function Layout({ pageTitle, children }) {
 
-    const data = {
-        site: {
-            siteMetadata :{
-                title :"My First Gatsby Site",
-            },
-        },
-    };
+    const data = useStaticQuery(graphql`
+    query {
+        site { 
+            siteMetadata { 
+                title, description 
+            }
+        }
+    }
+`)
     return (
         <div className={container}>
             <title>{pageTitle} | {data.site.siteMetadata.title}</title>
