@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby"
-import { container, heading, navLinks, navLinkItem, navLinkText } from "./layout.module.css"
+import { container, heading, navLinks, navLinkItem, navLinkText, siteTitle } from "./layout.module.css"
 
 function Layout({ pageTitle, children }) {
 
@@ -8,7 +8,7 @@ function Layout({ pageTitle, children }) {
     query {
         site { 
             siteMetadata { 
-                title, description 
+                title description 
             }
         }
     }
@@ -16,8 +16,7 @@ function Layout({ pageTitle, children }) {
     return (
         <div className={container}>
             <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-            <header>{data.site.siteMetadata.title}</header>
-            <div>{data.site.siteMetadata.description}</div>
+            <header className={siteTitle}>{data.site.siteMetadata.title}</header>
             <nav>
                 <ul className={navLinks}>
                     <li className={navLinkItem}>
