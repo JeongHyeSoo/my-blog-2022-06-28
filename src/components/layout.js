@@ -8,7 +8,7 @@ function Layout({ pageTitle, children }) {
     query {
         site { 
             siteMetadata { 
-                title description 
+                title 
             }
         }
     }
