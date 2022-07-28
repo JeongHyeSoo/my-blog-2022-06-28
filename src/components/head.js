@@ -1,5 +1,5 @@
-import React from "react";
 import { Link } from "gatsby"
+import React from "react";
 function Head() {
     return (
         <div style={{ gap: 20, display: "flex" }}>
